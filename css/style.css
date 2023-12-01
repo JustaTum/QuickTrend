@@ -1,0 +1,423 @@
+@charset "utf-8";
+/* CSS Document */
+@import url('https://fonts.google.com/specimen/Plus+Jakarta+Sans?preview.text=QuickTrend&stroke=Sans+Serif&subset=vietnamese&noto.script=Latn');
+body{font-family: 'plus jakarta sans', sans-serif;}
+*{box-sizing: border-box;}
+header{
+	min-height: 60px;
+}
+.text-gray{
+	color: #565859;
+}
+.title{
+	width: 85%;
+	min-height: 30px;
+	margin: 30px auto;
+	text-transform: uppercase;
+	font-size: 2.5em;
+	font-weight: 500;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+/*back-to-top-btn*/
+.btn-color{
+	background: linear-gradient(90deg, rgba(50,98,255,1) 0%, rgba(129,51,241,1) 100%);
+}
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+	/*Header*/
+.nav-color{
+	background: linear-gradient(90deg, rgba(50,98,255,1) 0%, rgba(129,51,241,1) 100%);
+}
+.container{
+	height: 60px;
+}
+	/*---Banner---*/
+
+/*Container*/
+.container-banner-1{
+	margin-top: 70px;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	background-color: #101622;
+}
+.container-banner-2{
+	margin-top: 0px;
+	min-height: 300px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #101622;
+}
+.container-banner-3{
+	margin-top: 0px;
+	min-height: 100px;
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	background-color: #101622;
+}
+
+/*Scroll*/
+.scroll{
+	white-space: nowrap;
+	margin: 0 2em;
+}
+.scroll div{
+	display: flex;
+	gap: 2em;
+}
+.scroll p{
+	font-size: 3em;
+	color: #b9bcbf;
+	font-weight: 600;
+}
+
+/*Animation*/
+.RightToLeft{
+	padding-top: 20px;
+	animation: RightToLeft 15s infinite linear;
+}
+@keyframes RightToLeft {
+	from{
+		transform: translateX(0%);
+	}
+	to{
+		transform: translateX(-50%);
+	}
+}
+
+.LeftToRight{
+	padding-top: 20px;
+	animation: LeftToRight 15s infinite linear;
+}
+@keyframes LeftToRight {
+	from{
+		transform: translateX(-50%);
+	}
+	to{
+		transform: translateX(0%);
+	}
+}
+
+.animated-text p{
+	font-size: 3em;
+	font-weight: 500;
+	color: #fdfdff;
+}
+.animated-text p span{
+	position: relative;
+}
+.animated-text p span::before{
+	content: "Giải trí";
+	color: #7ce6f9;
+	animation: words 20s infinite;
+}
+.animated-text p span::after{
+	content: "";
+	position: absolute;
+	width: calc(100% + 8px);
+	height: 100%;
+	background-color: #101622;
+	border-left: 2px solid #7ce6f9;
+	right: -8px;
+	animation: cursor 0.8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+	to{
+		border-left: 2px solid #7ce6f900;
+	}
+}
+
+@keyframes words{
+	0%,20%{
+		content: "Giải trí";
+	}
+	21%,40%{
+		content: "Phong cách";
+	}
+	41%,60%{
+		content: "Địa điểm";
+	}
+	61%,80%{
+		content: "Ẩm thực";
+	}
+	81%,100%{
+		content: "Phân tích";
+	}
+}
+
+@keyframes typing{
+	10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+		 width: 0;
+	}
+	5%,20%,25%,40%,45%,60%,65%,80%,85%{
+		width: calc(100% + 8px);
+	}
+}
+
+/*---Giới thiệu---*/
+#gioithieu{
+	background: #f1f4ff;
+}
+.container-gioithieu{
+	width: 85%;
+	margin: 0 auto;
+	min-height: 400px;
+}
+.gioithieu-text{
+	width: 85%;
+}
+.gioithieu-text h1{
+	color: #262626;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 600;
+}
+.gioithieu-text p{
+	color: #252525;
+	padding-top: 20px;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: justify;
+	word-spacing: 1px;
+	line-height: 30px;
+}
+.gioithieu-btn-box{
+	width: 100%;
+	margin-top: 0px;
+	padding-top: 20px;
+	margin-bottom: 100px;
+}
+.gioithieu-btn-box a{
+	font-weight: 500;
+}
+.gioithieu-btn{
+	color: #fff;
+ 	width: 50%;
+  	display: flex;
+  	font-size: 14px;
+  	justify-content: center;
+  	align-items: center;
+  	min-height: 50px;
+ 	border-radius: 30px;
+ 	background: linear-gradient(90deg, rgba(50,98,255,1) 0%, rgba(129,51,241,1) 100%);
+  	text-decoration: none;
+  	text-transform: uppercase;
+  	transition: all 0.3s;
+}
+
+/*---Tính năng---*/
+#tinhnang{
+	background: linear-gradient(90deg, rgba(129,51,241,0.4) 0%, rgba(46,89,232,0.4) 100%);
+}
+	/*Timeline-Design*/
+.wrapper{
+	max-width: 1080px;
+	margin: 50px auto;
+	padding: 0 20px;
+	position: relative;
+}
+.wrapper .center-line{
+	position: absolute;
+	height: 100%;
+	width: 4px;
+	background: #fff;
+	left: 50%;
+	top: 20px;
+	transform: translateX(-50%);
+	
+}
+.wrapper .row{
+	display: flex;
+	
+}
+.wrapper .row-1{
+	justify-content: flex-start;
+}
+.wrapper .row-2{
+	justify-content: flex-end;
+} 
+.wrapper .row section{
+	background: #fff;
+	border-radius: 5px;
+	width: calc(50% - 40px);
+	padding: 20px;
+	position: relative;
+}
+.wrapper .row section::before{
+	position: absolute;
+	content: "";
+	height: 15px;
+	width: 15px;
+	background: #fff;
+	top: 28px;
+	transform: rotate(45deg);
+}
+.row-1 section::before{
+	right: -7px;
+}
+.row-2 section::before{
+	left: -7px;
+}
+.row section .icon,
+.center-line .scroll-icon{
+	position: absolute;
+	background: #f2f2f2;
+	height: 40px;
+	width: 40px;
+	text-align: center;
+	line-height: 40px;
+	border-radius: 50px;
+	color: #ff7979;
+	font-size: 17px;
+	box-shadow: 0 0 0 4px #fff, inset 0 2px 0 rgba(0,0,0,0.08), 0 3px 0 4px rgba(0,0,0,0.05);
+	z-index: 2;
+}
+.center-line .scroll-icon{
+	bottom: 0px;
+	left: 50px;
+	font-size: 25px;
+	transform: translateX(-50%);
+}
+.row-1 section .icon{
+	top: 13px;
+	right: -60px;
+}
+.row-2 section .icon{
+	top: 13px;
+	left: -60px;
+}
+.row section .details,
+.row section .bottom{
+	display: flex;
+	justify-content: space-between;
+}
+.row section .details .title{
+	font-size: 22px;
+	font-weight: 600;
+}	
+.row section p{
+	margin: 10px 0 17px 0;
+	}	
+.row section .bottom a{
+	text-decoration: none;
+	background: #ff7979;
+	color: #fff;
+	padding: 7px 15px;
+	border-radius: 5px;
+	font-size: 17px;
+	font-weight: 400;
+}
+html{
+	scroll-behavior: smooth;
+}
+
+	/*---Về chúng tôi---*/
+.container-aboutus{
+	width: 85%;
+	margin: 0 auto;
+	min-height: 400px;
+}
+.gioithieu-aboutus{
+	width: 85%;
+}
+.gioithieu-aboutus h1{
+	color: #262626;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 600;
+}
+.gioithieu-aboutus p{
+	color: #252525;
+	padding-top: 20px;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: justify;
+	word-spacing: 1px;
+	line-height: 30px;
+}
+.gioithieu-aboutus-end{
+	width: 85%;
+}
+.gioithieu-aboutus-end h1{
+	color: #262626;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: 600;
+}
+.gioithieu-aboutus-end p{
+	color: #252525;
+	padding-top: 20px;
+	font-size: 18px;
+	font-weight: 400;
+	text-align: justify;
+	word-spacing: 1px;
+	line-height: 30px;	
+}
+.padding-minus{
+	padding-top: -30px;
+}
+/*---Liên hệ---*/
+.background{
+	width: 100%;
+	min-height: 400px;
+	background-color: rgba(14,14,14,1.00);
+}
+.brand-box{
+	padding-top: 30px;
+	padding-bottom: 30px;
+	width: 10%;
+	margin: 0 auto;
+}
+.footer-content-box{
+	margin-top: 30px;
+	width: 85%;
+	margin: 0 auto;
+}
+.footer-content{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.footer-content h4{
+	text-transform: uppercase;
+	font-weight: 400;
+}
+.footer-list{
+	text-align: center;
+}
+.footer-list ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.footer-list ul li{
+	display: flex;
+	justify-content: center;
+	padding-top: 20px;
+	transition: all 0.3s;
+	cursor: pointer;
+}
+.footer-list ul li a:hover{
+	color: #FF7671;
+}
+.footer-list ul li a{
+	color: #F3F3F3;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 300;
+	text-decoration: none;
+}
+.mt-425{
+	margin-top: 425px;
+}
